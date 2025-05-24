@@ -6,11 +6,13 @@ require('dotenv').config();
 
 const authRouts = require('./routes/auth');
 const courseRouts = require('./routes/course');
-const enrollmentRouts = require('./routes/enrollment');
+const enrollmentRouts = require('./routes/entrolment');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  { origin: process.env.CLIENT_URL} 
+));
 
 app.use('/api/auth', authRouts);
 app.use('/api/courses', courseRouts);
