@@ -12,7 +12,10 @@ const gptRoutes = require("./routes/gpt");
 const app = express();
 app.use(express.json());
 app.use(cors(
-  { origin: process.env.CLIENT_URL} 
+  { origin: process.env.CLIENT_URL,
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true  // Allow credentials (cookies, authorization headers, etc.)
+  } 
 ));
 
 app.use('/api/auth', authRouts);
