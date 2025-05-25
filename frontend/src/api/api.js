@@ -27,3 +27,5 @@ export const enrollInCourse = (courseId) => API.post(`/enrollment/${courseId}`);
 export const fetchMyEnrollments = () => API.get('/enrollment/my-courses');
 
 export const fetchEnrolledStudents = (courseId) => API.get(`/enrollment/course/${courseId}`);
+
+export const getGptRecommendations = (prompt) => API.post('/gpt/recommendations', { prompt });

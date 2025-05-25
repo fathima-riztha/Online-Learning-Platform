@@ -20,6 +20,7 @@ const Navbar = () => {
           <>
             <Link to="/courses">Courses</Link>
             <Link to="/my-courses">My Courses</Link>
+            <Link to="/gpt-recommendations">ChatGPT</Link>
             <button onClick={logout}>Logout</button>
           </>
         )}

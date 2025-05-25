@@ -19,6 +19,8 @@ import InstructorEnrolledStudents from './pages/InstructorEnrolledStudents';
 
 import CourseDetails from './pages/CourseDetails';
 
+import GptRecommendation from './pages/GptRecommendations';
+
 function App() {
   return (
     <AuthProvider>
@@ -86,6 +88,12 @@ function App() {
                 <CourseDetails />
               </ProtectedRoute>
             }
+          />
+          <Route 
+            path="/gpt-recommendations" 
+            element={
+              <GptRecommendation />
+            } 
           />
 
 
